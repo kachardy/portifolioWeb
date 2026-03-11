@@ -1,0 +1,234 @@
+/* Fonte usada*/
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+* {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  box-sizing: border-box;
+}
+
+/* Cores para o site */
+:root {
+  --azul-xp: #0053E1;
+  /* Azul forte*/
+  --azul-claro: #2471FF;
+  /* Azul para hover e detalhes */
+  --ciano-tech: #00D1FF;
+  /* Ciano */
+  --cinza-xp: #ECE9D8;
+  /* Cinza clarinho */
+  --branco-gelo: #F4F4F4;
+  /* Branco */
+  --texto-dark: #333333;
+  /* Preto para textos */
+}
+
+body {
+  background: linear-gradient(180deg, var(--azul-xp) 0%, var(--ciano-tech) 100%);
+  min-height: 100vh;
+  margin: 0;
+  color: var(--texto-dark);
+  margin-top: 80px; /* Reduzido para melhor equilíbrio visual */
+  padding-bottom: 50px;
+}
+
+nav {
+  background-color: var(--cinza-xp);
+  border-top: 1px solid #FFFFFF;
+  border-bottom: 2px solid #999;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 5px 0;
+
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+  justify-content: flex-end;
+  padding: 5px 20px;
+  margin: 0;
+}
+
+/* Configuração dos botão */
+.botao-menu {
+  display: inline-block;
+  text-decoration: none;
+  padding: 5px 15px;
+  background-color: var(--azul-xp);
+  color: var(--branco-gelo);
+  font-size: 1.2rem;
+
+  border-top: 2px solid var(--ciano-tech);
+  border-left: 2px solid var(--ciano-tech);
+  border-bottom: 2px solid #002D7A;
+  border-right: 2px solid #002D7A;
+
+  border-radius: 3px;
+  transition: all 0.1s;
+}
+
+/* Quando os botões são clicados */
+.botao-menu:active {
+  border-top: 2px solid #002D7A;
+  border-left: 2px solid #002D7A;
+  border-bottom: 2px solid var(--ciano-tech);
+  border-right: 2px solid var(--ciano-tech);
+  transform: translateY(1px);
+}
+
+.botao-menu:hover {
+  filter: brightness(1.2); /* Brilho suave sem mudar a cor do texto */
+}
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Espaçamento mais distribuído */
+
+  background-color: var(--cinza-xp);
+  border: 3px solid var(--azul-xp);
+  border-radius: 8px 8px 0 0;
+  position: relative;
+  padding: 60px 40px 40px 40px;
+  margin: 40px auto;
+  width: 85%; /* Ligeiramente maior para respiro do conteúdo */
+
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.15);
+}
+
+.hero-section::before {
+  content: "Perfil do Desenvolvedor - Kauê Lima";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: linear-gradient(to bottom, #0058e6 0%, #3a91ff 10%, #0058e6 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  font-size: 1rem;
+  border-radius: 5px 5px 0 0;
+}
+
+/* Estilo do nome */
+.nome {
+  font-size: 4.5rem;
+  color: var(--azul-xp);
+  margin: 0;
+  line-height: 1;
+}
+
+.nome:hover {
+  color: var(--azul-claro);
+  cursor: default;
+}
+
+/* Estilo da descrição */
+.hero-info p {
+  font-size: 1.6rem;
+  color: #444;
+  margin: 10px 0;
+}
+
+/* Seleciona apenas o primeiro parágrafo (Cargo) */
+.hero-info p:first-of-type {
+  border-left: 4px solid var(--azul-xp);
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+.hero-info h2 {
+  font-size: 2.2rem;
+  color: var(--azul-xp);
+  margin-top: 25px;
+}
+
+.hero-img img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid var(--branco-gelo);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.projetos-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: var(--azul-xp);
+  text-decoration: underline;
+  font-size: 1.4rem;
+  transition: 0.2s;
+}
+
+.projetos-link:hover {
+  color: var(--azul-claro);
+}
+
+/* Aside - Redes */
+aside {
+  background-color: var(--cinza-xp);
+  border: 3px solid var(--azul-xp);
+  border-radius: 8px 8px 0 0;
+  position: relative;
+  padding: 40px 10px 10px 10px; 
+  width: 250px; 
+  margin: 20px auto;    
+  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.1);
+}
+
+aside::before {
+  content: "Contatos / Redes";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 25px;
+  background: linear-gradient(to bottom, #0058e6 0%, #3a91ff 10%, #0058e6 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  font-size: 0.9rem;
+  border-radius: 5px 5px 0 0;
+}
+
+aside ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+aside ul li a {
+  display: flex;          
+  align-items: center;    
+  text-decoration: none;
+  color: var(--texto-dark);
+  font-size: 1.3rem;
+  padding: 8px 12px;
+  border-radius: 2px;
+  transition: 0.1s;      
+}
+
+aside ul li a:hover {
+  background-color: var(--azul-xp);
+  color: white;           
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--branco-gelo);
+  font-size: 1.1rem;
+}
