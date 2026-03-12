@@ -1,0 +1,22 @@
+:root {
+    --bg-light: #f8fafc;        /* Fundo bem clarinho */
+    --azul-principal: #2563eb;       /* Azul */
+    --azul-escuro: #1e3a8a;       /* Azul Escuro */
+    --texto-escuro: #1e293b;       /* Texto principal */
+    --texto-cinza: #64748b;     /* Texto secundário */
+    --branco: #ffffff;
+    --border-color: #e2e8f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
