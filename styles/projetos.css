@@ -1,0 +1,142 @@
+main {
+    margin-top: 80px; /* Cria o espaço necessário abaixo da navbar */
+    padding: 0 10% 80px 15%; /* Mantém o recuo para o aside na esquerda */
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 40px 0;
+    padding-left: 40px; /* Espaço para a linha na esquerda */
+}
+
+/* A linha vertical cinza */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: var(--border-color);
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 60px; /* Espaço entre um projeto e outro */
+}
+
+/* O ponto azul que fica em cima da linha */
+.timeline-dot {
+    position: absolute;
+    left: -46px; /* Alinha exatamente sobre a linha de 4px */
+    top: 20px;
+    width: 16px;
+    height: 16px;
+    background-color: var(--azul-principal);
+    border: 4px solid var(--bg-light); /* Cria um contorno para "cortar" a linha */
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.projeto-card {
+    display: block;
+    background-color: var(--branco);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.projeto-card:hover {
+    transform: translateX(10px);
+    border-color: var(--azul-principal);
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.1);
+}
+
+.projeto-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--azul-principal);
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.projeto-features {
+    list-style: none;
+    margin: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.projeto-features li {
+    background-color: #f1f5f9;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    color: var(--texto-cinza);
+}
+
+.link-indicador {
+    font-weight: 600;
+    color: var(--azul-principal);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    /* Ajuste do Container Principal */
+    main {
+        padding: 0 5% 50px 5%;
+        margin-top: 60px;
+    }
+
+    /* Removendo a Linha da Timeline */
+    .timeline {
+        padding-left: 0; 
+        margin: 20px 0;
+    }
+
+    .timeline::before {
+        display: none; /* Esconde a linha */
+    }
+
+    /* Ajustando o Ponto Azul */
+    .timeline-dot {
+        display: none; 
+    }
+
+    /* Ajustando o Card */
+    .timeline-item {
+        margin-bottom: 30px; 
+    }
+
+    .projeto-card {
+        padding: 20px;
+    }
+
+    .projeto-card:hover {
+        transform: none;
+    }
+
+    /* Ajustando as Tags de Tecnologia */
+    .projeto-features {
+        gap: 8px;
+    }
+
+    .projeto-features li {
+        font-size: 0.8rem;
+        padding: 3px 10px;
+    }
+
+    h2 {
+        font-size: 1.8rem; 
+        margin-bottom: 30px;
+    }
+}

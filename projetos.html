@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/projetos.css">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <title>Projetos - Kauê</title>
 </head>
+
 <body>
 
     <header>
@@ -20,39 +24,66 @@
         </nav>
     </header>
 
+    <aside>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/kauelima0824/" target="_blank"><img src="images/linkedin-icon.png"
+                        alt="Linkedin Icon"></a></li>
+            <li><a href="https://github.com/kachardy" target="_blank"><img src="images/github-icon.png"
+                        alt="Github Icon"></a></li>
+            <li><a href="https://www.instagram.com/kachardyy" target="_blank"><img src="images/instagram-icon.png"
+                        alt="Instagram Icon"></a></li>
+        </ul>
+    </aside>
+
     <main>
 
-        <section>
+        <section class="projetos-section">
             <h2>Lista de Projetos</h2>
 
-            <article>
-                <h3>Sistema de Cadastro de Monitores em Java</h3>
-                <p>Aplicação para gerenciamento monitores e editais de monitoria.</p>
-                <ul>
-                    <li>Criação de Editais</li>
-                    <li>Cadastro e Login de Aluno/Coordenador</li>
-                    <li>Edição e exclusão de Editais</li>
-                    <li>Busca de pelo nome dos alunos</li>
-                </ul>
-            </article>
+            <div class="timeline">
+                <article class="timeline-item">
+                    <div class="timeline-dot"></div> <a href="https://github.com/kachardy/Cadastro-de-Monitores"
+                        target="_blank" class="projeto-card">
+                        <span class="projeto-tag">Java & Swing</span>
+                        <h3>Sistema de Cadastro de Monitores</h3>
+                        <p>Aplicação completa para gerenciamento de editais e alunos, com sistema de login e busca
+                            dinâmica.</p>
+                        <ul class="projeto-features">
+                            <li>CRUD de Editais</li>
+                            <li>Busca por nome</li>
+                            <li>Gestão de usuários</li>
+                        </ul>
+                        <span class="link-indicador">Ver no GitHub →</span>
+                    </a>
+                </article>
 
-            <article>
-                <h3>Landing Page Comercial</h3>
-                <p>Página desenvolvida para vendas de cursos online.</p>
-                <ul>
-                    <li>Layout responsivo</li>
-                    <li>Vídeos e provas reais</li>
-                    <li>Seção de depoimentos</li>
-                </ul>
-            </article>
+                <article class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <a href="https://tropaaprovacao.com/" target="_blank" class="projeto-card">
+                        <span class="projeto-tag">Web Design / Vendas</span>
+                        <h3>Landing Page Comercial</h3>
+                        <p>Página de alta conversão focada em infoprodutos, com layout responsivo e prova social.</p>
+                        <ul class="projeto-features">
+                            <li>Alta performance</li>
+                            <li>Depoimentos dinâmicos</li>
+                            <li>Otimizada para Mobile</li>
+                        </ul>
+                        <span class="link-indicador">Visitar Site →</span>
+                    </a>
+                </article>
 
+            </div>
         </section>
 
     </main>
 
     <footer>
-        <p>&copy; 2026 Kauê Lima</p>
+        <p>&copy; 2026 Kauê Lima. Todos os direitos reservados.<br>
+            Desenvolvido por: Kauê Lima <br>
+            Ícones por: <a href="https://icons8.com.br/">icons8.com.br</a>
+        </p>
     </footer>
 
 </body>
+
 </html>

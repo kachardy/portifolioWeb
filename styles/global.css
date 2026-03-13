@@ -107,3 +107,8 @@ footer p {
     color: var(--texto-cinza);
     font-size: 0.9rem;
 }
+
+footer a {
+    text-decoration: none;
+    color: var(--texto-escuro);
+}
