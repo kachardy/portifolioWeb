@@ -1,0 +1,202 @@
+main {
+    margin-top: 80px; /* Cria o espaço necessário abaixo da navbar */
+    padding: 0 10% 80px 15%; /* Mantém o recuo para o aside na esquerda */
+}
+
+main section {
+    margin-bottom: 100px;
+}
+
+main h2 {
+    font-size: 2.2rem;
+    color: var(--texto-escuro);
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.quem-sou-eu {
+    padding: 60px;
+    background-color: var(--branco);
+    border-left: 8px solid var(--azul-principal);
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    margin-bottom: 60px;
+    max-width: 900px;
+}
+
+.quem-sou-eu h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.quem-sou-eu p {
+    font-size: 1.2rem;
+    line-height: 1.8; /* Aumenta o espaço entre linhas para facilitar a leitura */
+    color: var(--texto-escuro);
+    margin-bottom: 20px;
+}
+
+.destaque {
+    background-color: #dbeafe;
+    color: var(--azul-principal);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.formacao-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.formacao-item {
+    padding: 20px;
+    background-color: var(--branco);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: 0.3s ease;
+}
+
+.formacao-item:hover {
+    border-left: 6px solid var(--azul-principal);
+    transform: translateX(5px);
+}
+
+.formacao-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.formacao-header h3 {
+    font-size: 1.25rem;
+    color: var(--texto-escuro);
+}
+
+.status {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: #f1f5f9;
+    color: var(--texto-cinza);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+.formacao-item:hover .status {
+    background-color: var(--azul-principal);
+    color: var(--branco);
+}
+
+.instituicao {
+    color: var(--azul-principal);
+    font-weight: 500;
+}
+
+.habilidades ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 30px;
+    list-style: none;
+}
+
+.habilidades li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.habilidades li img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.habilidades li p {
+    opacity: 0; /* Começa invisível */
+    transition: 0.3s ease;
+    font-weight: 600;
+    color: var(--azul-principal);
+}
+
+.habilidades li:hover img {
+    transform: scale(1.1); /* Ícone cresce um pouco */
+}
+
+.habilidades li:hover p {
+    opacity: 1; /* Texto aparece */
+}
+
+.experiencias-container {
+    display: flex;
+    overflow-x: auto; /* Permite o scroll horizontal */
+    scroll-snap-type: x mandatory; /* Faz o efeito de "imã" nos cards */
+    gap: 20px;
+    padding-bottom: 20px;
+    scrollbar-width: none; /* Esconde a barra no Firefox */
+}
+
+.experiencias-container::-webkit-scrollbar {
+    display: none; /* Esconde a barra no Chrome/Safari */
+}
+
+.experiencias article {
+    flex: 0 0 350px;
+    scroll-snap-align: center; /* O card para sempre no centro ao arrastar */
+    background-color: var(--branco);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    transition: 0.2s ease;
+}
+
+.experiencias article:hover {
+    transform: translateY(-2px);
+}
+
+.experiencias article:hover h3 {
+    color: var(--azul-principal);
+}
+
+.local-tempo {
+    font-style: italic;
+    margin: 5px;
+}
+
+/* Resposivo */
+@media (max-width: 768px) {
+    main {
+        padding: 0 5% 50px 5%; 
+        margin-top: 60px;
+    }
+
+    main section {
+        margin-bottom: 60px;
+    }
+
+    .quem-sou-eu {
+        padding: 30px;
+        border-left: 6px solid var(--azul-principal); 
+    }
+
+    .habilidades ul {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    .experiencias article {
+        flex: 0 0 280px; 
+    }
+
+    .formacao-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+}
