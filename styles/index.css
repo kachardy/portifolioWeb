@@ -1,0 +1,85 @@
+/* ANIMAÇÃO DE ENTRADA */
+@keyframes entradaSuave {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* HERO SECTION */
+.hero-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10% 0 15%;
+    gap: 80px;
+}
+
+.hero-info {
+    max-width: 550px;
+}
+
+.nome {
+    font-size: 3.5rem;     
+    font-weight: 800;
+    color: var(--texto-escuro);
+    margin-bottom: 10px;
+    animation: entradaSuave 1.5s ease-out forwards;
+}
+
+.cargo {
+    font-size: 1.2rem;
+    color: var(--azul-principal);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.bem-vindo {
+    font-size: 2rem;
+    color: var(--texto-escuro);
+    margin-bottom: 20px;
+}
+
+.hero-info p {
+    font-size: 1.1rem;
+    color: var(--texto-cinza);
+    margin-bottom: 30px;
+}
+
+/* FOTO */
+.hero-img img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 999px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* BOTÃO DE PROJETOS */
+.projetos-link {
+    display: inline-block;
+    background-color: var(--azul-principal);
+    color: var(--branco);
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.39);
+}
+
+.projetos-link:hover {
+    background-color: var(--azul-escuro);
+    transform: translateY(-2px);
+}
+
+.projetos-link:active {
+    transform: translateY(0);  
+}
